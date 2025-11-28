@@ -1,0 +1,24 @@
+{
+  "name": "start_weel_solar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KOTZDAVI/start-well.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KOTZDAVI/start-well/issues"
+  },
+  "homepage": "https://github.com/KOTZDAVI/start-well#readme",
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
