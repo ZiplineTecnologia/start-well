@@ -533,9 +533,48 @@ footer {
 .about-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    /* Align to top to avoid stretching if heights differ */
+    gap: 80px;
+    align-items: center;
+}
+
+/* ... */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+/* ... */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+
+    .about-main,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-image {
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .contact-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* ... existing 768px styles can remain or be simplified since 1024px covers the stacking ... */
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    /* ... */
 }
 
 /* Ensure no overlap by default */
@@ -769,7 +808,66 @@ footer {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 80px 0;
+        /* Increased section padding */
+    }
+
+    /* Force spacing to prevent overlap on small screens */
+    .about-main,
+    .contact-wrapper {
+        display: flex;
+        /* Use flex column for better control on mobile */
+        flex-direction: column;
+        gap: 60px;
+        /* Consistent large gap */
+    }
+
+    .about-image {
+        margin: 0 auto 30px auto;
+        /* Center horizontally and add bottom margin */
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        display: block;
+        transform: none !important;
+        /* Disable animation offset */
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+        /* Explicit margin */
+    }
+
+    .about-text,
+    .contact-form,
+    .contact-info {
+        margin-top: 0;
+        transform: none !important;
+        text-align: center;
+        /* Center text */
+    }
+
+    .about-text {
+        align-items: center;
+        /* Center flex items if it's a flex container */
+    }
+
+    .info-item {
+        justify-content: center;
+        /* Center icon and text */
+        text-align: center;
+        /* Let's center for now based on request */
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        /* Center social icons */
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        text-align: center;
     }
 }
 
