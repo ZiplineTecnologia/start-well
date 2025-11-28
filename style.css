@@ -94,15 +94,19 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
 }
 
-.logo .highlight {
-    color: var(--primary-color);
+.logo img {
+    height: 50px;
+    /* Adjust as needed */
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -508,6 +512,15 @@ footer {
     background: black;
     color: var(--text-dim);
     font-size: 0.9rem;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
 }
 
 /* About Content Wrapper */
